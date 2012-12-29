@@ -40,8 +40,8 @@ Usage
 
 Now create your layout file. The content from the rendered view will be in a variable called `$yield`:
 
-``` php
-<html
+``` html+php
+<html>
   <head></head>
   <body>
     <?php echo $yield ?>
