@@ -1,0 +1,26 @@
+{
+  "name": "petebrowne/slim-layout-view",
+  "description": "A Custom View supporting Layouts for the Slim Framework.",
+  "version": "0.1.0",
+  "keywords": ["slim", "view", "layout"],
+  "license": "MIT",
+  "homepage": "http://petebrowne.com",
+  "authors": [
+    {
+      "name": "Pete Browne",
+      "email": "me@petebrowne.com",
+      "homepage": "http://petebrowne.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">= 5.3.0",
+    "slim/slim": "2.*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "3.7.*"
+  },
+  "autoload": {
+    "psr-0": { "Slim": "." }
+  }
+}
