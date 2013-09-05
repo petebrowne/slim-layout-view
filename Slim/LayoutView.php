@@ -62,10 +62,10 @@ class LayoutView extends View {
   }
 
   protected function renderLayout($layout, $yield) {
-    $currentTemplate = $this->templatePath;
+    $currentTemplate = $this->templateDirectory;
     $this->setData('yield', $yield);
     $result = $this->render($layout);
-    $this->templatePath = $currentTemplate;
+    $this->templateDirectory = $currentTemplate;
     $this->unsetData('yield');
 
     return $result;
