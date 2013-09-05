@@ -1,7 +1,7 @@
 {
   "name": "petebrowne/slim-layout-view",
   "description": "A Custom View supporting Layouts for the Slim Framework.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "keywords": ["slim", "view", "layout"],
   "license": "MIT",
   "homepage": "http://petebrowne.com",
