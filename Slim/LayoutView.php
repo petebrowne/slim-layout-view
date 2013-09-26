@@ -18,8 +18,8 @@ class LayoutView extends View {
    *
    * @param string $key
    */
-  public function unsetData($key) {
-    unset($this->data[$key]);
+  public function remove($key) {
+    $this->data->remove($key);
   }
 
   /**
@@ -30,7 +30,7 @@ class LayoutView extends View {
    */
   public function fetch($template) {
     $layout = $this->getLayout();
-    $this->unsetData('layout');
+    $this->remove('layout');
     $result = $this->render($template);
     if (is_string($layout)) {
       $result = $this->renderLayout($layout, $result);
@@ -47,7 +47,7 @@ class LayoutView extends View {
    * @return string|null
    */
   public function getLayout() {
-    $layout = $this->getData('layout');
+    $layout = $this->get('layout');
     if (is_null($layout)) {
       $app = Slim::getInstance();
       if (isset($app)) {
@@ -62,11 +62,11 @@ class LayoutView extends View {
   }
 
   protected function renderLayout($layout, $yield) {
-    $currentTemplate = $this->templateDirectory;
-    $this->setData('yield', $yield);
+    $currentTemplate = $this->templatesDirectory;
+    $this->set('yield', $yield);
     $result = $this->render($layout);
-    $this->templateDirectory = $currentTemplate;
-    $this->unsetData('yield');
+    $this->templatesDirectory = $currentTemplate;
+    $this->remove('yield');
 
     return $result;
   }
