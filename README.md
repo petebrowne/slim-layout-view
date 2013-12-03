@@ -11,7 +11,7 @@ Add `"petebrowne/slim-layout-view"` to your `composer.json` file:
 ``` json
 {
   "require": {
-    "slim/slim": "2.2.*",
+    "slim/slim": "2.*",
     "petebrowne/slim-layout-view": "0.2.*"
   }
 }
