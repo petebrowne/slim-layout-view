@@ -28,10 +28,10 @@ class LayoutView extends View {
    * @param string $template Path to template file relative to templates directory
    * @return string          The fully rendered view as a string.
    */
-  public function fetch($template) {
+  public function fetch($template, $data = NULL) {
     $layout = $this->getLayout();
     $this->remove('layout');
-    $result = $this->render($template);
+    $result = $this->render($template,$data = NULL);
     if (is_string($layout)) {
       $result = $this->renderLayout($layout, $result);
     }
