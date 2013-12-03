@@ -36,7 +36,16 @@ class LayoutViewTest extends PHPUnit_Framework_TestCase {
       'content' => 'World',
       'layout' => 'layout_with_data.php'
     ));
-    $output = $this->view->fetch('template_with_data.php');
+    $output = $this->view->fetch('template_with_data.php', array());
+    $this->assertEquals("<h1>Hello</h1>\n<p>World</p>", trim($output));
+  }
+
+  public function testAdditionalDataInFetch() {
+    $output = $this->view->fetch('template_with_data.php', array(
+      'title' => 'Hello',
+      'content' => 'World',
+      'layout' => 'layout_with_data.php'
+    ));
     $this->assertEquals("<h1>Hello</h1>\n<p>World</p>", trim($output));
   }
 }
