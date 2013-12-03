@@ -45,7 +45,7 @@ Now create your layout file. The content from the rendered view will be in a var
   <head></head>
   <body>
     <?php echo $yield ?>
-  <body>
+  </body>
 </html>
 ```
 
